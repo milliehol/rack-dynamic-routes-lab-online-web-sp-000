@@ -11,7 +11,7 @@ class Application
       song_title = req.path.split("/itemss/").last #turn /songs/Sorry into Sorry
       song = @@songs.find{|s| s.title == song_title}
  
-      resp.write song.artist
+      resp.write {#items.price}
     end
     else
       resp.write "Route not found"
