@@ -9,7 +9,7 @@ class Application
     if req.path.match(/items/)
  
       items_title = req.path.split("/items/").last 
-      song = @@items.find{|s| s.title == song_title}
+      item = @@items.find{|s| s.title == song_title}
  
       resp.write {#items.price}
     end
