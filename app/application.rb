@@ -4,12 +4,12 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    @@items = []
+    @@item = []
  
     if req.path.match(/items/)
  
       items_title = req.path.split("/items/").last 
-      item = @@items.find{|s| s.name == items_title}
+      item = @@item.find{|s| s.name == items_title}
  
       if item.nil?
         resp.write "Item not found"
