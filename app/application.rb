@@ -1,10 +1,10 @@
 class Application
+  
+  @@item = []
  
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    
-    @@item = []
  
     if req.path.match(/items/)
  
